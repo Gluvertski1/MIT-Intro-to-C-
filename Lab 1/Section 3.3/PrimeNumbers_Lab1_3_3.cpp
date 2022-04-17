@@ -43,7 +43,7 @@ int main(){
             break;
         }
         else{
-            for(int i = 0; i<n; i++){
+            for(int i = 1; i<n; i++){
                 out = i/divisor;
                 if(i%divisor == 1){
                     break;
