@@ -11,48 +11,46 @@
 
 using namespace std;
 
-// int calc_prime(int a, int n){
-//     int rem;
-
-//     if(n == 2){
-//         return 2;
-//     }
-//     else{
-//         if(a != n){
-//             return calc_prime(a + 1, n);
-//         }        
-//     }
-
-//     for(int i = 2; i<n; i++){
-//         rem = i%;  
-//     }
-// }
+int calc_prime(int n){
+    int i, count;
+    int primity;
+    for(i=1; i < n; i++)
+    {
+        primity = n%i;
+        if(primity > 0)
+        {
+            count++;
+        }
+        if(count > 2)
+        {
+            break;
+            return false;
+        }
+    }
+    return true;
+}
 
 int main(){
-    int n, out;
-    int divisor = 2;
+    
+    int n, count;
+    bool is_prime;
+    cout << "Please enter a number (N-primes will be output): ";
+    cin >> n;
+    // checking to make sure the user didn't enter a letter, negative number, 
+    // an even number, or 0 and 1. 
+    if(isalpha(n) && n>0){
+        cout << "This is not a number or a positive integer! Good Bye.";
+    }
+    else{    
+        while(count < n)
+        {
+            is_prime = calc_prime(count);
+            if(count == true)
+            {
+                cout << count << ',';
 
-    do
-    {
-        cout << "Please enter a number (N-primes will be output): ";
-        cin >> n;
-        // checking to make sure the user didn't enter a letter, negative number, 
-        // an even number, or 0 and 1. 
-        if(isalpha(n) && n>0){
-            cout << "This is not a number or a positive integer! Good Bye.";
-            break;
-        }
-        else{
-            for(int i = 1; i<n; i++){
-                out = i/divisor;
-                if(i%divisor == 1){
-                    break;
-                }
-                else{
-                    cout << divisor;
-                }
-                divisor++;
             }
-        }
-    } while (true);
+        }   
+        
+    }
 }
