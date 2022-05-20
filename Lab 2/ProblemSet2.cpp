@@ -85,12 +85,39 @@ using namespace std;
 // ----------------------------------------------------------------------------------------------------------------------
 
 // PS2 6.1
-void printArray(const int array[], int i){
-    // cout << array[i];
-    // i == 0 ? exit: cout << ", "; 
-    // cout << i;
-    // printArray(array + 1, i - 1);
-    
+// void printArray(const int array[], int i){
+//     for(int k = 0; k < i; k++)
+//     {
+//         if(k == i-1){
+//             cout << array[k];
+//         }
+//         else{
+//             cout << array[k] << ", ";
+//         }
+//     } 
+// }
+
+// PS2 6.2
+// void printReverse(const int array[], int i){
+//     for(int k = i; k > 0; k--)
+//     {
+//         cout << array[k-1] << " ";
+//     } 
+// }
+
+// PS2 6.3 -- I dont understand the question. Will come back later. 
+// void transpose(const int input[][LENGTH], int output[][WIDTH]){
+//     cout << input[][];
+// }
+
+// PS2 6.5 -- 6.2 but with ptr offset notation
+void printReverse(const int *pntr, int i){
+    pntr = pntr + i;
+    for(int k = i; k > 0; k--)
+    {
+        pntr--;
+        cout << *pntr << " ";
+    } 
 }
 
 
@@ -105,6 +132,9 @@ int main(){
 
     // PS2 Section 6
     int arr[8] = {6,118,9,4,2,11,88,1};
-    printArray(arr, 8);
-
+    // printArray(arr, 8);
+    // printReverse(arr, 8);
+    // void transpose(const int input[][LENGTH], int output[][WIDTH]);
+    const int *ptr = arr;
+    printReverse(ptr, 8);
 }
