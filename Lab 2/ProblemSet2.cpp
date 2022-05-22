@@ -111,15 +111,26 @@ using namespace std;
 // }
 
 // PS2 6.5 -- 6.2 but with ptr offset notation
-void printReverse(const int *pntr, int i){
-    pntr = pntr + i;
-    for(int k = i; k > 0; k--)
-    {
-        pntr--;
-        cout << *pntr << " ";
-    } 
-}
+// void printReverse(const int *pntr, int i){
+//     pntr = pntr + i;
+//     for(int k = i; k > 0; k--)
+//     {
+//         pntr--;
+//         cout << *pntr << " ";
+//     } 
+// }
 
+// ----------------------------------------------------------------------------------------------------------------------
+
+// PS2 7.1
+char string_length(char *){
+    int length;
+
+    
+
+
+    return length;
+}
 
 int main(){
     // PS2 Section 4
@@ -131,10 +142,13 @@ int main(){
     // cout << calc_pie(n);
 
     // PS2 Section 6
-    int arr[8] = {6,118,9,4,2,11,88,1};
+    // int arr[8] = {6,118,9,4,2,11,88,1};
     // printArray(arr, 8);
     // printReverse(arr, 8);
     // void transpose(const int input[][LENGTH], int output[][WIDTH]);
-    const int *ptr = arr;
-    printReverse(ptr, 8);
+    // const int *ptr = arr;
+    // printReverse(ptr, 8);
+
+    // PS2 Section 7
+
 }
